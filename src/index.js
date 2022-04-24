@@ -8,6 +8,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import './App.scss'
+import {BrowserRouter} from "react-router-dom";
 
 const token = "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";
 
@@ -28,9 +29,11 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-    <ApolloProvider client={client} >
-        <App />
-    </ApolloProvider>,
+    <BrowserRouter>
+        <ApolloProvider client={client} >
+            <App />
+        </ApolloProvider>
+    </BrowserRouter>,
     document.getElementById("root")
 );
 

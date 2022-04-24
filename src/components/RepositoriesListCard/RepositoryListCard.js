@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import {useNavigate} from "react-router-dom";
 
 const bull = (
     <Box
@@ -15,7 +16,12 @@ const bull = (
     </Box>
 );
 
-export default function RepositoryListCard(props) {
+export const RepositoryListCard = (props) => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/repository-details');
+    }
+
     return (
         <Card sx={{ minWidth: 275, margin: 8  }}>
             <CardContent>
@@ -24,7 +30,7 @@ export default function RepositoryListCard(props) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">More details</Button>
+                <Button size="small" onClick={handleClick}>More details</Button>
             </CardActions>
         </Card>
     );

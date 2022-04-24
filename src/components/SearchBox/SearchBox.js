@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import './SearchBox.scss';
 
-export default function SearchBox() {
+export const SearchBox = () => {
     return (
         <div className="searchBox-container">
             <Box sx={{display: 'flex', alignItems: 'flex-end'}}>

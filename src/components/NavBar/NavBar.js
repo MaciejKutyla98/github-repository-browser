@@ -9,8 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
-const pages = ['Find repository!', 'List of repositories'];
+const pages = ['Find repository', 'List of repositories'];
 
 const ResponsiveAppBar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -68,7 +69,11 @@ const ResponsiveAppBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center">
+                                        <Link to={`/${page}`} style={{ textDecoration: "none", color: "white"}}>
+                                            {page}
+                                        </Link>
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -81,7 +86,9 @@ const ResponsiveAppBar = () => {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                <Link to={`/${page}`} style={{ textDecoration: "none", color: "white"}}>
+                                    {page}
+                                </Link>
                             </Button>
                         ))}
                     </Box>
