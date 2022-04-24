@@ -8,8 +8,8 @@ export const VIEWER_LOGIN = gql`
      }
 `;
 
-export const ViewerLogin = () => {
-    const { loading, error, data } = useQuery(VIEWER_LOGIN);
-    if (loading) return <p>Loading ...</p>;
-    return <h1>Hello {data?.viewer?.login}!</h1>;
-}
+// export const ViewerLogin = () => {
+//     const { loading, error, data } = useQuery(VIEWER_LOGIN);
+//     if (loading) return <p>Loading ...</p>;
+//     return <h1>Hello {data?.viewer?.login}!</h1>;
+// }

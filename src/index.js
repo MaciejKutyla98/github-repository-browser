@@ -7,8 +7,9 @@ import {
     HttpLink, ApolloProvider
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import './App.scss'
 
-const token = "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";
+const token = "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";
 
 const authLink = setContext((_, { headers }) => {
     return {
@@ -27,7 +28,7 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-    <ApolloProvider client={client}>
+    <ApolloProvider client={client} >
         <App />
     </ApolloProvider>,
     document.getElementById("root")
