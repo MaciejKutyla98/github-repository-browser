@@ -26,7 +26,7 @@ export const RepositoryListCard = (props) => {
         <Card sx={{ minWidth: 275, margin: 8  }}>
             <CardContent>
                 <Typography variant="h5" component="div">
-                    Repository name
+                    {props.repositoryName}
                 </Typography>
             </CardContent>
             <CardActions>

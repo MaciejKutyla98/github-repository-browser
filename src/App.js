@@ -3,8 +3,8 @@ import AppBar from "./components/NavBar/NavBar";
 import BottomNavigation from '@mui/material/BottomNavigation';
 import {SearchBox} from "./components/SearchBox/SearchBox";
 import {RepositoryDetailsCard} from "./components/RepositoryDetailsCard/RepositoryDetailsCard";
-import {RepositoryListCard} from "./components/RepositoriesListCard/RepositoryListCard";
 import { Route, Routes } from "react-router-dom";
+import {AllRepositories} from "./components/AllRepositories/AllRepositories";
 
 const App = () => {
 
@@ -12,9 +12,9 @@ const App = () => {
     <div className="App">
         <AppBar />
         <Routes >
-            <Route path="/" element={<RepositoryListCard />} />
+            <Route path="/" element={<AllRepositories />} />
             <Route  path="/Find%20repository" element={<SearchBox />} />
-            <Route  path="/List%20of%20repositories" element={<RepositoryListCard />} />
+            <Route  path="/List%20of%20repositories" element={<AllRepositories />} />
             <Route path="/repository-details" element={<RepositoryDetailsCard />} />
         </Routes >
         <BottomNavigation />

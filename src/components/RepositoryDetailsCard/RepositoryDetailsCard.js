@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import PropTypes from 'prop-types';
+import {useQuery} from "@apollo/client";
+import {VIEWER_LOGIN} from "../../graphql/queries/viewerLogin";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -43,7 +45,7 @@ function a11yProps(index) {
 
 export const RepositoryDetailsCard = (props) => {
     const [value, setValue] = React.useState(0);
-
+    const { loading, error, data } = useQuery(VIEWER_LOGIN);
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -51,7 +53,7 @@ export const RepositoryDetailsCard = (props) => {
         <Card sx={{ minWidth: 275, margin: 8 }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14, margin: 2 }} color="text.secondary" gutterBottom>
-                    MaciejKutyla98
+                    {data?.viewer?.login}
                 </Typography>
                 <Typography sx={{ margin: 2 }} variant="h5" component="div">
                     Github Repository Browser
