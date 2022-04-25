@@ -1,22 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 import {
     ApolloClient,
     InMemoryCache,
-    HttpLink, ApolloProvider
+    HttpLink,
+    ApolloProvider,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import './App.scss'
-import {BrowserRouter} from "react-router-dom";
+import "./App.scss";
+import { BrowserRouter } from "react-router-dom";
 
-const token = "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";
+const token = "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";
 
 const authLink = setContext((_, { headers }) => {
     return {
         headers: {
             ...headers,
-            authorization: token ? `Token ${token}` : '',
+            authorization: token ? `Token ${token}` : "",
         },
     };
 });
@@ -30,10 +31,9 @@ const client = new ApolloClient({
 
 ReactDOM.render(
     <BrowserRouter>
-        <ApolloProvider client={client} >
+        <ApolloProvider client={client}>
             <App />
         </ApolloProvider>
     </BrowserRouter>,
     document.getElementById("root")
 );
-

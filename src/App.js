@@ -8,18 +8,18 @@ import {AllRepositories} from "./components/AllRepositories/AllRepositories";
 
 const App = () => {
 
-  return (
-    <div className="App">
-        <AppBar />
-        <Routes >
-            <Route path="/" element={<AllRepositories />} />
-            <Route  path="/Find%20repository" element={<SearchBox />} />
-            <Route  path="/List%20of%20repositories" element={<AllRepositories />} />
-            <Route path="/repository-details/:name" element={<RepositoryDetailsCard />} />
-        </Routes >
-        <BottomNavigation />
-    </div>
-  );
+    return (
+        <div className="App">
+            <AppBar />
+            <Routes >
+                <Route path="/" element={<AllRepositories />} />
+                <Route  path="/Find%20repository" element={<SearchBox />} />
+                <Route  path="/List%20of%20repositories" element={<AllRepositories />} />
+                <Route path="/repository-details/:name" element={<RepositoryDetailsCard />} />
+            </Routes >
+            <BottomNavigation />
+        </div>
+    );
 }
 
 export default App;
