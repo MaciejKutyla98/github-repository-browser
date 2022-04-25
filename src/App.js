@@ -15,7 +15,7 @@ const App = () => {
             <Route path="/" element={<AllRepositories />} />
             <Route  path="/Find%20repository" element={<SearchBox />} />
             <Route  path="/List%20of%20repositories" element={<AllRepositories />} />
-            <Route path="/repository-details" element={<RepositoryDetailsCard />} />
+            <Route path="/repository-details/:name" element={<RepositoryDetailsCard />} />
         </Routes >
         <BottomNavigation />
     </div>

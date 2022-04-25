@@ -10,7 +10,7 @@ import { setContext } from "@apollo/client/link/context";
 import './App.scss'
 import {BrowserRouter} from "react-router-dom";
 
-const token = "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";
+const token = "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";
 
 const authLink = setContext((_, { headers }) => {
     return {

@@ -19,7 +19,7 @@ const bull = (
 export const RepositoryListCard = (props) => {
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/repository-details');
+        navigate(`/repository-details/${props.repositoryName}`);
     }
 
     return (

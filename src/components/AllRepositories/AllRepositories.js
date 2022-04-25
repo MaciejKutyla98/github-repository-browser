@@ -29,7 +29,7 @@ export const AllRepositories = ()  => {
         <Box p="5" >
             {_DATA.currentData().map(v => {
               return (
-                  <RepositoryListCard  repositoryName={v.name}/>
+                  <RepositoryListCard  key={v.id} repositoryName={v.name}/>
               );
             })}
             <Box
